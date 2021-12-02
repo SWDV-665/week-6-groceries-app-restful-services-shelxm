@@ -9,12 +9,13 @@ import { AppComponent } from './app.component';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { GroceriesServiceService } from './groceries-service.service';
+import { InputDialogServiceService } from './input-dialog-service.service';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, SocialSharing, GroceriesServiceService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, SocialSharing, GroceriesServiceService, InputDialogServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
